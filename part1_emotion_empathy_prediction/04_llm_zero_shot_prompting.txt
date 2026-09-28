@@ -1,0 +1,272 @@
+CS 421 - Project Part One - Question 4
+LLM Prompting for Emotion and Empathy Prediction
+Prompting Strategy: ZERO-SHOT
+LLM Used: ChatGPT 5
+================================================================================
+
+================================================================================
+CONVERSATION 1
+IDs: 46 to 55
+================================================================================
+
+PROMPT:
+--------------------------------------------------------------------------------
+Analyze this conversation about a news story. For EACH turn (1-10), predict:
+
+1. Emotion intensity: 1–4
+2. Empathy level: 1–4
+3. Emotional polarity: 0–2
+
+Conversation:
+Turn 1: I think that is unlikely but maybe. you?
+Turn 2: the chances of that happening are really low
+Turn 3: Yeah maybe a attack or something more likely
+Turn 4: yeah might have been intentional
+Turn 5: That makes it sort of less sad in a way to me
+Turn 6: yeah kinda. what emotions did you get?
+Turn 7: if it was an attack then more anger I guess
+Turn 8: i felt some anger too
+Turn 9: was it only men or any kids die?
+Turn 10: they did not specify
+
+Please respond in EXACTLY this format (use only integers 1-4 for Emotion/Empathy, and 0/1/2 for Polarity):
+
+Turn 1: Emotion=X, Empathy=X, Polarity=X
+Turn 2: Emotion=X, Empathy=X, Polarity=X
+...
+
+LLM RESPONSE:
+--------------------------------------------------------------------------------
+Turn 1: Emotion=2, Empathy=2, Polarity=0
+Turn 2: Emotion=2, Empathy=1, Polarity=0
+Turn 3: Emotion=2, Empathy=1, Polarity=2
+Turn 4: Emotion=2, Empathy=1, Polarity=2
+Turn 5: Emotion=3, Empathy=2, Polarity=2
+Turn 6: Emotion=2, Empathy=3, Polarity=0
+Turn 7: Emotion=3, Empathy=2, Polarity=2
+Turn 8: Emotion=3, Empathy=3, Polarity=2
+Turn 9: Emotion=3, Empathy=3, Polarity=2
+Turn 10: Emotion=1, Empathy=2, Polarity=0
+
+GOLD LABELS:
+--------------------------------------------------------------------------------
+Turn 1 (ID: 46): Emotion=2.00, Empathy=1.00, Polarity=1.0
+Turn 2 (ID: 47): Emotion=1.00, Empathy=1.00, Polarity=1.0
+Turn 3 (ID: 48): Emotion=2.00, Empathy=1.00, Polarity=1.0
+Turn 4 (ID: 49): Emotion=2.00, Empathy=1.00, Polarity=1.0
+Turn 5 (ID: 50): Emotion=2.00, Empathy=1.00, Polarity=1.0
+Turn 6 (ID: 51): Emotion=1.00, Empathy=1.00, Polarity=1.0
+Turn 7 (ID: 52): Emotion=2.00, Empathy=2.00, Polarity=2.0
+Turn 8 (ID: 53): Emotion=2.00, Empathy=2.00, Polarity=2.0
+Turn 9 (ID: 54): Emotion=1.00, Empathy=1.00, Polarity=1.0
+Turn 10 (ID: 55): Emotion=1.00, Empathy=1.00, Polarity=1.0
+
+
+================================================================================
+CONVERSATION 2
+IDs: 180 to 189
+================================================================================
+
+PROMPT:
+--------------------------------------------------------------------------------
+Analyze this conversation about a news story. For EACH turn (1-10), predict:
+
+1. Emotion intensity: 1–4
+2. Empathy level: 1–4
+3. Emotional polarity: 0–2
+
+Conversation:
+Turn 1: It was nice talking to you too!
+Turn 2: Hello
+Turn 3: hello
+Turn 4: My reactions to the article was that there is work to be done. You?
+Turn 5: i feel serious intervention is needed
+Turn 6: That was way too many fires that took place in 2015.
+Turn 7: unfortunately and now they are clearing the same forest
+Turn 8: illegal logging is also a issue
+Turn 9: I wish the article would give numbers on how the company will benefit the local people
+Turn 10: I totally agree because there are conflicting opinions.
+
+LLM RESPONSE:
+--------------------------------------------------------------------------------
+Turn 1: Emotion=2, Empathy=3, Polarity=1
+Turn 2: Emotion=1, Empathy=1, Polarity=0
+Turn 3: Emotion=1, Empathy=1, Polarity=0
+Turn 4: Emotion=2, Empathy=3, Polarity=0
+Turn 5: Emotion=3, Empathy=3, Polarity=2
+Turn 6: Emotion=3, Empathy=2, Polarity=2
+Turn 7: Emotion=3, Empathy=3, Polarity=2
+Turn 8: Emotion=2, Empathy=2, Polarity=2
+Turn 9: Emotion=3, Empathy=3, Polarity=0
+Turn 10: Emotion=2, Empathy=3, Polarity=0
+
+GOLD LABELS:
+--------------------------------------------------------------------------------
+Turn 1 (ID: 180): Emotion=3.00, Empathy=1.00, Polarity=0.0
+Turn 2 (ID: 181): Emotion=1.00, Empathy=1.00, Polarity=1.0
+Turn 3 (ID: 182): Emotion=1.00, Empathy=1.00, Polarity=1.0
+Turn 4 (ID: 183): Emotion=2.00, Empathy=2.00, Polarity=1.0
+Turn 5 (ID: 184): Emotion=3.00, Empathy=3.00, Polarity=2.0
+Turn 6 (ID: 185): Emotion=2.00, Empathy=2.00, Polarity=2.0
+Turn 7 (ID: 186): Emotion=2.00, Empathy=2.00, Polarity=2.0
+Turn 8 (ID: 187): Emotion=2.00, Empathy=2.00, Polarity=2.0
+Turn 9 (ID: 188): Emotion=1.00, Empathy=1.00, Polarity=1.0
+Turn 10 (ID: 189): Emotion=2.00, Empathy=1.00, Polarity=1.0
+
+
+================================================================================
+CONVERSATION 3
+IDs: 545 to 554
+================================================================================
+
+PROMPT:
+--------------------------------------------------------------------------------
+Analyze this conversation about a news story. For EACH turn (1-10), predict:
+
+1. Emotion intensity: 1–4
+2. Empathy level: 1–4
+3. Emotional polarity: 0–2
+
+Conversation:
+Turn 1: I'm sorry that it made you feel scared. I sympathize with you.
+Turn 2: How did it make you feel
+Turn 3: I felt bad for the people that live there. That's my first thought. I feel really bad for the people that live there and probably can't do anything about it to leave because it sounds like a real crappy place in my opinion
+Turn 4: I don't really understand what the war is about do you?
+Turn 5: from my understanding there were rebels that were given an ultimatum to lay down their arms and if not they were going to be killed it also said the article was from CNN so I don't take too much stock and anything that comes from there
+Turn 6: I read that to but that's not what the war is about.  I would like to find out.
+Turn 7: It doesn't say specifically but it mentions some things like when it referred to how Russia is there a major player with the president and government over there and how syria is trying to gain control over the city but I I don't understand completely myself honestly
+Turn 8: Either way I cannot not imagine having to live like that how about you
+Turn 9: I could not imagine living like that. I am very thankful to be an American and living in the United States. There is absolutely no way I would ever want to live in Syria with that type of stuff going on that's for sure. The article also talked about Isis and some things about the Kurds they talked about a lot of the groups over there
+Turn 10: It's really quite crazy to think this is going on in our world right now as we chat
+
+LLM RESPONSE:
+--------------------------------------------------------------------------------
+Turn 1: Emotion=3, Empathy=4, Polarity=2
+Turn 2: Emotion=2, Empathy=3, Polarity=0
+Turn 3: Emotion=4, Empathy=4, Polarity=2
+Turn 4: Emotion=2, Empathy=2, Polarity=0
+Turn 5: Emotion=3, Empathy=2, Polarity=2
+Turn 6: Emotion=2, Empathy=3, Polarity=0
+Turn 7: Emotion=2, Empathy=3, Polarity=0
+Turn 8: Emotion=3, Empathy=4, Polarity=2
+Turn 9: Emotion=4, Empathy=3, Polarity=2
+Turn 10: Emotion=3, Empathy=3, Polarity=2
+
+GOLD LABELS:
+--------------------------------------------------------------------------------
+Turn 1 (ID: 545): Emotion=3.00, Empathy=3.00, Polarity=1.5
+Turn 2 (ID: 546): Emotion=1.00, Empathy=2.00, Polarity=1.0
+Turn 3 (ID: 547): Emotion=3.00, Empathy=3.00, Polarity=2.0
+Turn 4 (ID: 548): Emotion=2.00, Empathy=2.00, Polarity=1.5
+Turn 5 (ID: 549): Emotion=2.00, Empathy=3.00, Polarity=1.5
+Turn 6 (ID: 550): Emotion=1.00, Empathy=2.00, Polarity=1.0
+Turn 7 (ID: 551): Emotion=2.00, Empathy=3.00, Polarity=1.0
+Turn 8 (ID: 552): Emotion=2.00, Empathy=2.00, Polarity=2.0
+Turn 9 (ID: 553): Emotion=3.00, Empathy=3.00, Polarity=2.0
+Turn 10 (ID: 554): Emotion=2.00, Empathy=2.00, Polarity=1.5
+
+
+================================================================================
+CONVERSATION 4
+IDs: 569 to 578
+================================================================================
+
+PROMPT:
+--------------------------------------------------------------------------------
+Analyze this conversation about a news story. For EACH turn (1-10), predict:
+
+1. Emotion intensity: 1–4
+2. Empathy level: 1–4
+3. Emotional polarity: 0–2
+
+Conversation:
+Turn 1: lol that sounds pretty cool pretty interesting to watch lol I never watched it myself and I never really should have judged it as a reality show and not being interesting or some thing I guess because I never gave it a chance if that makes sense
+Turn 2: But reading that article made me recall that season and part of their dilema was where they would live.  She couldn't go to syria as they would kill her but he had to go to finish like his schooling or something.
+Turn 3: Hello
+Turn 4: hello
+Turn 5: what did you think of the article?
+Turn 6: it made me sad
+Turn 7: It was quite distressing to read for me. I am not a fan of war
+Turn 8: i think Syria is being unfairly attacked
+Turn 9: I agree. Many innocent people are getting harmed.
+Turn 10: the food shortages were alarming
+
+LLM RESPONSE:
+--------------------------------------------------------------------------------
+Turn 1: Emotion=2, Empathy=2, Polarity=1
+Turn 2: Emotion=2, Empathy=3, Polarity=0
+Turn 3: Emotion=1, Empathy=1, Polarity=0
+Turn 4: Emotion=1, Empathy=1, Polarity=0
+Turn 5: Emotion=2, Empathy=2, Polarity=0
+Turn 6: Emotion=3, Empathy=3, Polarity=2
+Turn 7: Emotion=3, Empathy=3, Polarity=2
+Turn 8: Emotion=3, Empathy=2, Polarity=2
+Turn 9: Emotion=3, Empathy=4, Polarity=2
+Turn 10: Emotion=3, Empathy=3, Polarity=2
+
+GOLD LABELS:
+--------------------------------------------------------------------------------
+Turn 1 (ID: 569): Emotion=2.00, Empathy=1.00, Polarity=0.0
+Turn 2 (ID: 570): Emotion=2.00, Empathy=2.00, Polarity=2.0
+Turn 3 (ID: 571): Emotion=1.00, Empathy=0.00, Polarity=1.0
+Turn 4 (ID: 572): Emotion=1.00, Empathy=0.00, Polarity=1.0
+Turn 5 (ID: 573): Emotion=1.00, Empathy=0.00, Polarity=1.0
+Turn 6 (ID: 574): Emotion=3.00, Empathy=3.00, Polarity=2.0
+Turn 7 (ID: 575): Emotion=3.00, Empathy=3.00, Polarity=2.0
+Turn 8 (ID: 576): Emotion=3.00, Empathy=3.00, Polarity=2.0
+Turn 9 (ID: 577): Emotion=3.00, Empathy=3.00, Polarity=2.0
+Turn 10 (ID: 578): Emotion=3.00, Empathy=4.00, Polarity=2.0
+
+
+================================================================================
+CONVERSATION 5
+IDs: 670 to 679
+================================================================================
+
+PROMPT:
+--------------------------------------------------------------------------------
+Analyze this conversation about a news story. For EACH turn (1-10), predict:
+
+1. Emotion intensity: 1–4
+2. Empathy level: 1–4
+3. Emotional polarity: 0–2
+
+Conversation:
+Turn 1: they destroy it so they can rebuild it for more profit and power
+Turn 2: That makes sense. Have you ever experienced war first hand?
+Turn 3: not on the frontlines
+Turn 4: I have not either. I guess that's a blessing.
+Turn 5: some might say there is a war on the USA with inflation and food factories on fire and train derailments
+Turn 6: True. It's like a silent war.
+Turn 7: i think the say groups waging war on Syria are also waging war on USA
+Turn 8: It's unfortunate to have these groups become so powerful and during these wars the most vulnerable population are left to fend for themselves.
+Turn 9: i think there is a global population happening in Syria and also the USA
+Turn 10: A global population? Like a reduction?
+
+LLM RESPONSE:
+--------------------------------------------------------------------------------
+Turn 1: Emotion=3, Empathy=2, Polarity=2
+Turn 2: Emotion=2, Empathy=3, Polarity=0
+Turn 3: Emotion=2, Empathy=2, Polarity=0
+Turn 4: Emotion=2, Empathy=3, Polarity=1
+Turn 5: Emotion=3, Empathy=2, Polarity=2
+Turn 6: Emotion=3, Empathy=3, Polarity=2
+Turn 7: Emotion=3, Empathy=2, Polarity=2
+Turn 8: Emotion=3, Empathy=4, Polarity=2
+Turn 9: Emotion=3, Empathy=2, Polarity=2
+Turn 10: Emotion=2, Empathy=3, Polarity=0
+
+GOLD LABELS:
+--------------------------------------------------------------------------------
+Turn 1 (ID: 670): Emotion=3.00, Empathy=3.00, Polarity=2.0
+Turn 2 (ID: 671): Emotion=1.00, Empathy=2.00, Polarity=1.0
+Turn 3 (ID: 672): Emotion=1.00, Empathy=1.00, Polarity=1.0
+Turn 4 (ID: 673): Emotion=2.00, Empathy=2.00, Polarity=0.0
+Turn 5 (ID: 674): Emotion=2.00, Empathy=1.00, Polarity=2.0
+Turn 6 (ID: 675): Emotion=1.00, Empathy=1.00, Polarity=2.0
+Turn 7 (ID: 676): Emotion=1.00, Empathy=2.00, Polarity=2.0
+Turn 8 (ID: 677): Emotion=2.00, Empathy=4.00, Polarity=2.0
+Turn 9 (ID: 678): Emotion=1.00, Empathy=0.00, Polarity=1.0
+Turn 10 (ID: 679): Emotion=1.00, Empathy=1.00, Polarity=1.0
+
+

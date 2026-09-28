@@ -1,0 +1,20 @@
+# Raw WASSA data (not redistributed)
+data/
+trac2_*.csv
+goldstandard_*.csv
+
+# Models and embeddings
+*.pt
+*.npy
+best_model_*/
+wassa_embeddings/
+
+# Python / Jupyter
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.venv/
+
+# OS
+.DS_Store
+__MACOSX/
